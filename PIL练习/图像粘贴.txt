@@ -1,0 +1,14 @@
+from PIL import Image
+#convent()和resize() 可对size和mode进行调整
+
+rawimg = Image.open("C:\\Users\\aming\\1.jpg")
+rawimg = rawimg.resize((1176,1176))
+print(rawimg.size)
+
+im = Image.open("C:\\Users\\aming\\5.jpg")
+print(im.size)
+## rawimg的size和im的size要相同，不然不能匹配
+# paste(用来粘贴的图片，(位置坐标))，可以通过设置位置坐标来确定粘贴图片的位置
+# 该方法没有返回值，直接作用于原图片
+rawimg.paste(im,(60,20))
+rawimg.show()

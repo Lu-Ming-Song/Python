@@ -1,0 +1,19 @@
+
+from PIL import Image
+
+img = Image.open("C:\\Users\\aming\\1.jpg")
+img = img.convert("L")
+img.show()
+
+imgdata = list(img.getdata())
+print(imgdata)
+
+addlist = []
+for i in range(len(imgdata)):
+    if imgdata[i]>250:
+        addlist.append(imgdata[i]-100)
+    else:
+        addlist.append(imgdata[i])
+    
+img.putdata(addlist)
+img.show()

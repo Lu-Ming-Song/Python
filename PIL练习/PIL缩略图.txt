@@ -1,0 +1,11 @@
+from PIL import Image
+import  glob,os
+
+size = 1000,1000
+for infile in glob.glob('C:\\Users\\aming\\1.jpg'): # glob的作用是文件搜索， 返回的是一个列表
+    file,ext = os.path.splitext(infile)
+    im = Image.open(infile)
+    im.thumbnail(size, Image.ANTIALIAS) # 等比缩放
+    im.save(file+".thumbnail","JPEG")
+    im.show() # 显示缩略图
+    # print(im.size, im.mode)

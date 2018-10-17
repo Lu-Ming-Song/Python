@@ -1,0 +1,11 @@
+from PIL import Image
+#创建一个灰度图像
+
+newL = Image.new("L",(28,28),255)
+newL.show()
+#创建一个RGb图像
+newrgb = Image.new("RGB",(28,28),(20,200,45))
+newrgb.show()
+
+newrgba = Image.new("RGBA",(28,28),(20,200,45,255))
+newrgba.show()

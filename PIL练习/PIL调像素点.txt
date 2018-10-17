@@ -1,0 +1,5 @@
+from PIL import Image
+im = Image.open("C:\\Users\\aming\\6.jpg")
+
+imnew = Image.eval(im,lambda i:i*2) # 将原图片的像素点，都乘2，返回的是一个Image对象
+imnew.show()
