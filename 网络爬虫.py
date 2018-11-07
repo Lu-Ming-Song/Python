@@ -32,17 +32,18 @@ def getImg(html):
        
     
     for imgurl in imglist:
-        name = time.strftime("%Y_%m_%d",time.localtime()) + '_' + str(x)
+        #name = time.strftime("%Y_%m_%d",time.localtime()) + '_' + str(x)
             
          #注意，这里的文件路径，每段路径的首字母一定要大写！！小写会识别出错
-        urllib.request.urlretrieve(imgurl, r'C:\Users\aming\Desktop\K\%s.jpg' % name)
+        urllib.request.urlretrieve(imgurl, r'C:\Users\aming\Desktop\Img\%s.jpg' % x)
         x += 1
         
         
       
-    
-for i in range(2,4):
+html = getHtml("https://tieba.baidu.com/p/2460150866?pn=2")
+getImg(html)
+'''for i in range(2,4):
         
         html = getHtml("https://tieba.baidu.com/p/2460150866?pn=" + str(i))
-        getImg(html)
+        getImg(html)'''
        
